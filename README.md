@@ -24,12 +24,28 @@ In **conclusion** I would say that pure Markdown according the CommonMark-Specif
 
 And this is what this repository is about. **A collection of evaluation results, ideas and prototypes with the goal to implement the workflows for efficiently building a "Second Brain" with none closed source tools.**
 
-## Evaluation of alternative Markdown Editors
-Please continue to read in [Open Source Alternatives for Obsidian (currently only in German language, sorry!)](Open%20Source%20Alternativen%20zu%20Obsidian.md)
+## What's wrong with the License of Obsidian?
+Obsidian can be used for free only for private use only. In all other cases a subscription is required according to the [Obsidian Pricing](https://obsidian.md/pricing) model. And since obsidian is a tool that provides additional value to my private knowledge-managment, I - of course - want to benefit from these values in my work as well.
 
+Well, I'm sure that just the price is not an issue if it is about to argue for a new knowledge-management tooling in my company (and from my point of view the value of this tooling for my work could be much greater than e.g. 50 USD/year). The issue is that I **have to argue** for a new knowledge-management tool. The problem is the type of software and that the branch "knowledge-management" is so much overloaded with different toolings. And or course in my company there are already dozens of such tools in use. In a company in which "Standards" are very important, it is not easy to introduce a new tooling just because "I like it".
+
+Introducing a new subscription is much more expensive in other ways:
+* for the time to convice my manager to pay for the subscription
+* maybe for the time to find other users who want to use the software as well (just to get more weight) 
+* for the time to align with the internal sails department
+* for the time to align with the License Management Team
+* for the time to convince IT department to introduce, accept and deploy the tool
+* for the time to take the internal "ownership" for the software, ensure it doesn't call home and it is always kept up to date.
+
+Putting these points together, using Obsidian in my company is currently not an option for me. It's now my personal interest to search for alternatives that can I can use in both contexts - private and commercial.
+
+## Evaluation of Alternative Markdown Editors
+So I started my journey with an Evaluation of alternative Markdown Editors which is described in an Article called [Open Source Alternatives for Obsidian (currently only in German language, sorry!)](Open%20Source%20Alternativen%20zu%20Obsidian.md)
+
+I'am currently about to dig deeper inside the variant of using [Visual Studio Code as a Second Brain UI](Visual%20Studio%20Code%20as%20a%20Second%20Brain%20UI.md) as it seems very promising to me.
 
 # How could you help?
-If you think that there's something wrong in this collection of articles, or you know some new aspects not yet considered, please open an GitHub-Issue in this repository.
+If you think that there's something wrong in this collection of articles, or you know some new aspects# not yet considered, please open an GitHub-Issue in this repository.
 
 # License
 Everything in this folder is under [MIT License](LICENSE).

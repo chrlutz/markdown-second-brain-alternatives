@@ -1,7 +1,7 @@
 # Open Source Alternativen zu Obsidian
-Da Obsidian Closed Source ist und nur mit Abo für kommerzielle Nutzung angeboten wird, werde ich wohl kaum Obsidian in der Arbeit nutzen können. Ich benötige einen Open Source Ersatz, den ich in der Arbeit bedenkenfrei nutzen kann.
+Obsidian ist eine tolle Software, aber für mich aktuell nicht in allen für mich relevanten Lebensbereichen (privat + arbeit) nutzbar. Deshalb hier ein Vergleich möglicher Alternativen zu Obsidian. Die Anforderung "Open Source" hat sich im Lauf der Evaluierung so weit aufgeweicht, dass es mir auch ausreicht, wenn die Lizenz eine kostenlose kommerzielle Nutzung erlaubt.
 
-# Anforderungen
+# Anforderungen an ein UI zur Unterstützung des "Second Brain" Ansatzes
 ## GFM-Support
 [GitHub Flavored Markdown (GFM)](https://github.github.com/gfm/) muss als Basis-Syntax verstanden und gerendert werden, weil sonst zumindest Task-Listen und Tabellen fehlen.
 
@@ -30,39 +30,11 @@ Einen wirklichen Mehrwert im Vergleich zu bisherigen Markdown-Editoren schafft O
 # Evaluierung
 
 ## Visual Studio Code mit Markdown
-* Mit der Extension **"markdown-preview-enhanced"** lassen sich andere für uns wichtige Ergänzungen machen *(Wichtig: mit Ctrl+K v erneut aktivieren!)*:
-    * Die Preview kann Quick-Links darstellen! (aber leider werden Leerzeichen durch Unterstriche ersetzt, was nicht kompatibel ist zum Obsidian-Verhalten)
-    * Der Parser kann erweitert werden, so dass dann auch tags sinnvoll dargestellt werden können. Dazu habe ich auch schon mit diesem [parser.js](https://shd101wyy.github.io/markdown-preview-enhanced/#/extend-parser) Snippet erste Erfahrungen gemacht (PoC ist sicherlich ausbaubar!):
-    ```
-    module.exports = {
-        onWillParseMarkdown: function(markdown) {
-            return new Promise((resolve, reject)=> {
-                markdown = markdown.replace(/#(\w+)/gm, ($0, $1) => `[#${$1}](tags/${$1}.md)`);
-                return resolve(markdown);
-            })
-        },
-        onDidParseMarkdown: function(html, {cheerio}) {
-            return new Promise((resolve, reject)=> {
-                return resolve(html)
-            })
-        },
-        onWillTransformMarkdown: function (markdown) {
-            return new Promise((resolve, reject) => {
-                return resolve(markdown);
-            });
-        },
-        onDidTransformMarkdown: function (markdown) {
-            return new Promise((resolve, reject) => {
-                return resolve(markdown);
-            });
-        }
-    }
-    ```
-    * Es sollen auch [Code Chunks](https://shd101wyy.github.io/markdown-preview-enhanced/#/code-chunk) möglich sein, mit denen man evtl. die Funktionen von DataView abbilden könnte
-* Mit der Extension **"Markdown Linkifier"** wird die `[[`interner Link`]]` Syntax von Obsidian unterstützt  --> Aber leider nur im Markdown-Editor und nicht in der VS-Code Standard Vorschau
-	* Schwächen: 
-		* Backlinks werden in der Auto-Completion nicht unterstützt
-		* Neue Seiten können damit nicht angelegt werden ([[Neuanlegen von Notizen über einen Quick-Link]])
+* Mit der Extension **"markdown-preview-enhanced"** und der
+* Mit der Extension **"Markdown Linkifier"** (Vorsicht nicht verwechseln mit "Markdown Linkify") werden Quick-Links in der `[[`interner Link`]]` Syntax von Obsidian unterstützt
+* Mit Hilfe des Tools [wiki-link-tool.py](wiki-link-tool.py) können Schwächen der o.g. Extensions mitigiert werden.
+
+Dieser Ansatz ist aktuell sehr vielversprechend und deshalb in einem eigenen Artikel [Visual Studio Code as a Second Brain UI](Visual%20Studio%20Code%20as%20a%20Second%20Brain%20UI.md) ausführlicher beschrieben.
 
 ### Evaluierung weiterer VSCode-Plugins
 * Das Plugin **[Markdown Notes (Zettelkasten Remix)](https://marketplace.visualstudio.com/items?itemName=maxedmands.vscode-zettel-markdown-notes)** verspricht neben Quick-Links auch noch weitere Features wie z.B. das [[Neuanlegen von Notizen über einen Quick-Link]] - macht das aber ganz anders, weil eine Notiz nach dem Zettelkasten-Prinzip einen uniq Identifier besitzt (den wir aber nicht wollen, weil der Filename genug uniq ist). Über den "Pfad" als Identifier (das ist auswählbar) lassen sich aber keine neuen Notizen automatisch erstelln. Das Plugin möchte auch Tags unterstützen, habe ich aber nicht getestet. Außerdem wollen sie per Default den Suffix ".md" immer noch im Link mit aufführen, was auch zu Inkompatibllität mit Obsidian führt.
