@@ -25,7 +25,7 @@ In **conclusion** I would say that pure Markdown according the CommonMark-Specif
 And this is what this repository is about. **A collection of evaluation results, ideas and prototypes with the goal to implement the workflows for efficiently building a "Second Brain" with none closed source tools.**
 
 ## What's wrong with the License of Obsidian?
-Obsidian can be used for free only for private use only. In all other cases a subscription is required according to the [Obsidian Pricing](https://obsidian.md/pricing) model. And since obsidian is a tool that provides additional value to my private knowledge-managment, I - of course - want to benefit from these values in my work as well.
+Obsidian can be used for free only for private use. In all other cases a subscription is required according to the [Obsidian Pricing](https://obsidian.md/pricing) model. And since obsidian is a tool that provides additional value to my private knowledge-managment, I - of course - want to benefit from these values in my work as well.
 
 Well, I'm sure that just the price is not an issue if it is about to argue for a new knowledge-management tooling in my company (and from my point of view the value of this tooling for my work could be much greater than e.g. 50 USD/year). The issue is that I **have to argue** for a new knowledge-management tool. The problem is the type of software and that the branch "knowledge-management" is so much overloaded with different toolings. And or course in my company there are already dozens of such tools in use. In a company in which "Standards" are very important, it is not easy to introduce a new tooling just because "I like it".
 
