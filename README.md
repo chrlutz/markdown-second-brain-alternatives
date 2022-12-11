@@ -32,7 +32,7 @@ Well, I'm sure that just the price is not an issue if it is about to argue for a
 Introducing a new subscription is much more expensive in other ways:
 * for the time to convice my manager to pay for the subscription
 * maybe for the time to find other users who want to use the software as well (just to get more weight) 
-* for the time to align with the internal sails department
+* for the time to align with the internal sales department
 * for the time to align with the License Management Team
 * for the time to convince IT department to introduce, accept and deploy the tool
 * for the time to take the internal "ownership" for the software, ensure it doesn't call home and it is always kept up to date.
