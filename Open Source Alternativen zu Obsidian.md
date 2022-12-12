@@ -54,3 +54,6 @@ Die Diskutieren hier, ob man "Quick Links" einführen könnte: https://discourse
 * Neue Notizen erhalten eine ID mit einem Hash-Wert - ich möchte aber anstatt einem Hash-Wert den Klartext Filenamen haben, so wie ich ihn im Wiki-Link angegeben habe.
 * Tags werden nicht im Dokument mit abgelegt, sondern in der Datenbank
 * Leider trotz obiger Diskussion keine unmittelbare Unterstützung für Quick-Links enthalten. In meinen Recherchen habe ich aber dann nur von einem Plugin gelesen, welches in Echtzeit die `[[`linkname`]]` Syntax umwandelt in die Typische Link Syntax `(linkname)[/joplin-hash]`. Das ist für den von mir angestrebten Einsatz ohne Datenbank nicht zielführend.
+
+## Quartz
+* [ ] Evaluieren: https://github.com/jackyzha0/quartz
